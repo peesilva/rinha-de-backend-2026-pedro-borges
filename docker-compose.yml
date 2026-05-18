@@ -1,5 +1,4 @@
 services:
-
   nginx:
     image: nginx:1.27-alpine
     container_name: rinha-nginx
@@ -17,8 +16,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "30MB"
+          cpus: "0.05"
+          memory: "25MB"
 
   api1:
     image: ghcr.io/peesilva/fraud-api:latest
@@ -38,8 +37,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: "155MB"
+          cpus: "0.475"
+          memory: "162MB"
 
   api2:
     image: ghcr.io/peesilva/fraud-api:latest
@@ -59,8 +58,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: "155MB"
+          cpus: "0.475"
+          memory: "162MB"
 
 networks:
   rinha-net:
