@@ -2,19 +2,19 @@
 name = "fraud-api"
 version = "0.1.0"
 edition = "2021"
-
+ 
 [lib]
 name = "fraud_api"
 path = "src/lib.rs"
-
+ 
 [[bin]]
 name = "build-index"
 path = "src/build_index.rs"
-
+ 
 [[bin]]
 name = "server"
 path = "src/main.rs"
-
+ 
 [dependencies]
 hyper = { version = "1", features = ["http1", "server"] }
 hyper-util = { version = "0.1", features = ["tokio"] }
@@ -24,7 +24,7 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 flate2 = "1"
 memmap2 = "0.9"
-
+ 
 [profile.release]
 opt-level = 3
 lto = "fat"
